@@ -140,11 +140,13 @@ app.layout = html.Div([
         ##### Instructions:
         Select borough by hovering over map area, select tree species from drop-down.
         ''',
+        style={"margin":"10px"}
         ),
         dcc.Graph(
             id='nyc-county-map',
             figure=map,
             hoverData={'points': [{'customdata': ['Manhattan',0]}]},
+            style={"margin":"10px"}
         ),
 
         html.Br(),
@@ -158,6 +160,7 @@ app.layout = html.Div([
             id='species-dropdown',
             options=species_options,
             value=species_list[0],
+            style={"margin":"10px"}
         ),
 
         html.Br(),
@@ -173,9 +176,10 @@ app.layout = html.Div([
         '''
         **Data Source:** [NYC Open Data - 2015 Street Tree Census](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh)
         ''',
-        link_target="_blank"
+        link_target="_blank",
+        style={'margin':'10px'}
     ),
-    ], style={'display': 'inline-block','float':'left','width': '49%','margin':'20px'}),
+    ], style={'display': 'inline-block','float':'left','width': '49%'}),
 
     html.Div([
         dcc.Graph(id='health-graph'),
