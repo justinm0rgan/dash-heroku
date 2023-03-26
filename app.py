@@ -175,7 +175,7 @@ app.layout = html.Div([
         ''',
         link_target="_blank"
     ),
-    ], style={'display': 'inline-block','float':'left','width': '49%'}),
+    ], style={'display': 'inline-block','float':'left','width': '49%','margin':'20px'}),
 
     html.Div([
         dcc.Graph(id='health-graph'),
