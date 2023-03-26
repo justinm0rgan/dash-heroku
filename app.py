@@ -144,7 +144,8 @@ app.layout = html.Div([
         dcc.Graph(
             id='nyc-county-map',
             figure=map,
-            hoverData={'points': [{'customdata': ['Manhattan',0]}]}
+            hoverData={'points': [{'customdata': ['Manhattan',0]}]},
+            style={'margin': '10px'}
         ),
 
         html.Br(),
