@@ -139,13 +139,12 @@ app.layout = html.Div([
         '''
         ##### Instructions:
         Select borough by hovering over map area, select tree species from drop-down.
-        '''
+        ''',
         ),
         dcc.Graph(
             id='nyc-county-map',
             figure=map,
             hoverData={'points': [{'customdata': ['Manhattan',0]}]},
-            style={'margin': '10px'}
         ),
 
         html.Br(),
@@ -158,7 +157,7 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='species-dropdown',
             options=species_options,
-            value=species_list[0]
+            value=species_list[0],
         ),
 
         html.Br(),
@@ -176,7 +175,7 @@ app.layout = html.Div([
         ''',
         link_target="_blank"
     ),
-    ], style={'width': '50%', 'float':'left','display': 'inline-block', 'padding': '0 20'}),
+    ], style={'width': '50%', 'float':'left','display': 'inline-block'}),
 
     html.Div([
         dcc.Graph(id='health-graph'),
@@ -213,7 +212,7 @@ def update_health_graph(species, hoverData):
     
     # update the layout
     fig.update_layout(
-        title=f'Health % of {species} Trees in {borough}',
+        title=f'Health Status of {species} in {borough}',
         xaxis_title='Health',
         yaxis_title='Percentage (%)',
         bargap=0.1,
@@ -274,7 +273,7 @@ def update_steward_graph(species, hoverData):
     
 # Update the layout
     fig.update_layout(
-        title=f'Health Status of {species} % by Steward Type in {borough}',
+        title=f'Health Status of {species} by Steward Type in {borough}',
         xaxis_title='Steward Type',
         yaxis_title='Percentage (%)',
         barmode='group',
