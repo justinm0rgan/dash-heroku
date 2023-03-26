@@ -146,7 +146,7 @@ app.layout = html.Div([
             id='nyc-county-map',
             figure=map,
             hoverData={'points': [{'customdata': ['Manhattan',0]}]},
-            style={"margin":"20px"}
+            style={"margin":"10px"}
         ),
 
         html.Br(),
@@ -161,10 +161,10 @@ app.layout = html.Div([
         dcc.Dropdown(
             id='species-dropdown',
             options=species_options,
-            value=species_list[0]
+            value=species_list[0],
+            style={"margin":"10px"}
         ),
 
-        html.Br(),
         html.Br(),
         html.Br(),
         html.Br(),
