@@ -175,12 +175,12 @@ app.layout = html.Div([
         ''',
         link_target="_blank"
     ),
-    ], style={'width': '50%', 'float':'left','display': 'inline-block'}),
+    ], style={'display': 'inline-block','float':'left','width': '49%'}),
 
     html.Div([
         dcc.Graph(id='health-graph'),
         dcc.Graph(id='steward-graph'),
-    ], style={'display': 'inline-block', 'float':'right','width': '50%'}),
+    ], style={'display': 'inline-block', 'float':'right','width': '49%'}),
 
 ])
 
