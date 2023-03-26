@@ -146,7 +146,7 @@ app.layout = html.Div([
             id='nyc-county-map',
             figure=map,
             hoverData={'points': [{'customdata': ['Manhattan',0]}]},
-            style={"margin":"10px"}
+            style={"margin":"20px"}
         ),
 
         html.Br(),
@@ -165,7 +165,6 @@ app.layout = html.Div([
             style={"margin":"10px"}
         ),
 
-        html.Br(),
         html.Br(),
         html.Br(),
         html.Br(),
