@@ -173,8 +173,8 @@ app.layout = html.Div([
         html.Br(),
         html.Br(),
         html.Br(),
-        html.Br(),
-
+        
+        html.Img(src='nyc-open-data-logo.svg'),
         dcc.Markdown(
         '''
         **Data Source:** [NYC Open Data - 2015 Street Tree Census](https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/uvpi-gqnh)
